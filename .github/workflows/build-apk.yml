@@ -7,6 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,3 +31,13 @@ jobs:
           name: irish-tunes-debug-apk
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
+
+      - name: Create release with APK
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.${{ github.run_number }}
+          name: Irish Tunes v1.0.${{ github.run_number }}
+          files: app/build/outputs/apk/debug/app-debug.apk
+          body: |
+            APK debug de l'application Irish Tunes (WebView embarquant le tutoriel irish-tunes-tutor).
+            Installation : autoriser les sources inconnues. MinSdk 24 (Android 7.0+).
