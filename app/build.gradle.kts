@@ -31,6 +31,5 @@ dependencies {
     constraints {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22")
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22")
-        because("Aligner kotlin-stdlib-jdk7/jdk8 avec kotlin-stdlib 1.8.22")
     }
 }
