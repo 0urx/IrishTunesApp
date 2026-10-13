@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.IrishTunes" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">#169B62</item>
+        <item name="android:windowBackground">#F4F6F7</item>
+    </style>
+</resources>
